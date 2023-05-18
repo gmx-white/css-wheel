@@ -1,0 +1,25 @@
+.picground {
+  --bg: url(./assets/font_pic.jpg) no-repeat center/cover;
+  width: 100%;
+  height: 100px;
+  background: var(--bg);
+  font-family:Georgia, 'Times New Roman', Times, serif;  
+}
+.modal {
+  background: rgba(0, 0, 0, 0.5);
+  height: 100%;
+  width: 100%;
+}
+.modal h1 {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 4vw;
+  -webkit-text-stroke: 1px #fff;
+  background: var(--bg);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
