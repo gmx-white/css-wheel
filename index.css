@@ -1,3 +1,21 @@
+body {
+  scroll-behavior: smooth; 
+}
+/* 置顶按钮 */
+.top-button {
+  width: 40px;
+  height: 40px;
+  position: fixed;
+  top: 80%;
+  right: 5%;
+  border: 1px solid #000;
+  border-radius: 20px;
+  text-align: center;
+  line-height: 40px;
+  cursor: pointer;
+  user-select: none;
+}
+/* 文字图片背景 */
 .picground {
   --bg: url(./assets/font_pic.jpg) no-repeat center/cover;
   width: 100%;
@@ -22,4 +40,25 @@
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
+}
+
+/* 滚动的小球(css变量) */
+.moving-ball {
+  width: calc(100%- 4px);
+  height: 100px;
+  border: 2px solid #000;
+}
+.ball{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: yellowgreen;
+  margin-top: 25px;
+  animation: move 10s linear infinite;
+}
+/* tips: calc内变量计算，格式必须标准(运算符用空格隔开) */
+@keyframes move {
+  50% {
+    transform: translateX(calc(var(--w) - 100%));
+  }
 }
