@@ -91,7 +91,7 @@
   display: inline-block;
   border: 1px solid black;
   background-image: -webkit-linear-gradient(left, #fff, #344c0d 25%,#fff 50%, #344c0d 75%, #fff);
-  -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   background-size: 200% 100%;
   animation: follow 4s linear infinite;
