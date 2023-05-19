@@ -16,12 +16,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 4vw;
+  font-size: 5vw;
   -webkit-text-stroke: 1px #fff;
   background: var(--bg);
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
+  letter-spacing: 10px;
 }
 
 /* 文字方向 */
