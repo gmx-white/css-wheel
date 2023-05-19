@@ -23,3 +23,84 @@
   -webkit-background-clip: text;
   color: transparent;
 }
+
+/* 文字方向 */
+.font-derection {
+  writing-mode: vertical-rl;
+}
+.year {
+  text-combine-upright: all;
+}
+/* 立体文字 (但是放大可以看到不同阴影叠加的锯齿)*/
+.text3d {
+  color: #344c0d;
+  font-size: 5em;
+  text-shadow: -1px 1px #bbb, -2px 2px #bbb, -3px 3px #bbb, -4px 4px #bbb, -12px 12px 3px #666;
+}
+/* 立体文字阴影 */
+.shadow {
+  font-size: 5em;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.shadow::before {
+  content: "SHADOW";
+  position: absolute;
+  color: #333;
+  transform: scaleY(0.5) translate(-41px, 30px) skew(50deg);
+  z-index: -1;
+  filter: blur(3px);
+  /* mask属性兼容性差，属性名迭代较快 */
+  -webkit-mask-box-image: linear-gradient(transparent, #000);
+}
+
+/* 文字环绕 */
+.font-circle img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  float: left;
+  margin-right: 1em;
+  /* 针对浮动元素，其外侧文字如何环绕 */
+  shape-outside: circle(50%);
+}
+/* 单行文字溢出 */
+.ellipsis {
+  border: 1px solid #000;
+  width: 200px;
+  height: 20px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.multy-ellipsis {
+  margin-top: 30px;
+  border: 1px solid #000;
+  width: 200px;
+  height: 80px;
+  line-height: 20px;
+  overflow: hidden;
+  display:-webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+}
+
+.light-change {
+  display: inline-block;
+  border: 1px solid black;
+  background-image: -webkit-linear-gradient(left, #fff, #344c0d 25%,#fff 50%, #344c0d 75%, #fff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200% 100%;
+  animation: follow 4s linear infinite;
+}
+.light-change span {
+  letter-spacing: 10px;
+  font-size: 5em;
+}
+@keyframes follow {
+  100% {
+    background-position: -100% 0;
+  }
+}
