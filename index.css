@@ -74,7 +74,7 @@
   overflow: hidden;
   text-overflow: ellipsis;
 }
-
+/* 多行溢出 */
 .multy-ellipsis {
   margin-top: 30px;
   border: 1px solid #000;
@@ -86,12 +86,13 @@
   -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
 }
-
+/* 文字光影 */
 .light-change {
   display: inline-block;
   border: 1px solid black;
   background-image: -webkit-linear-gradient(left, #fff, #344c0d 25%,#fff 50%, #344c0d 75%, #fff);
   background-clip: text;
+  -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-size: 200% 100%;
   animation: follow 4s linear infinite;
@@ -104,4 +105,19 @@
   100% {
     background-position: -100% 0;
   }
+}
+
+/* 下划线 */
+.bottom-line {
+  /* line-height: 2; */
+}
+.bottom-line span {
+  background: linear-gradient(to right, #ec695c, #61c454) no-repeat right bottom;
+  letter-spacing: 10px;
+  background-size: 0 2px;
+  transition: background-size 2s;
+}
+.bottom-line span:hover {
+  background-position-x: left;
+  background-size: 100% 2px;
 }
