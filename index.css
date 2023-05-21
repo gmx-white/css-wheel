@@ -20,19 +20,20 @@
   line-height: 0;
 }
 .card2, .card3 {
+  backface-visibility: hidden;
+  /* transition: transform 1s; */
   z-index: 2;
 }
 .card2 {
-  backface-visibility: hidden;
   transform-origin: center top;
   transform: rotateX(180deg);
-  /* animation: flip2 1s linear backwards infinite; */
-  transition: transform 1s;
+  animation: flip2 1s linear backwards infinite;
+  animation-play-state: paused;
 }
 .card3 {
   transform-origin: center bottom;
-  backface-visibility: hidden;
-  /* animation: flip1 1s linear infinite; */
+  animation: flip1 1s linear backwards infinite;
+  animation-play-state: paused;
 }
 @keyframes flip1 {
   0% {
