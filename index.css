@@ -1,3 +1,10 @@
+.calendar {
+  width: 608px;
+  height: 200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 .card-container {
   width: 200px;
   height: 200px;
@@ -27,6 +34,7 @@
   /* transition: transform 1s; */
   z-index: 2;
 }
+
 .card2 {
   transform-origin: center top;
   transform: rotateX(180deg);
@@ -36,6 +44,18 @@
   transform-origin: center bottom;
   animation: flip1 1s ease-in-out backwards infinite;
 }
+/* 时分暂停 */
+.card2.hour, .card2.minute {
+  /* transform-origin: center top; */
+  /* transform: rotateX(180deg); */
+  /* animation: flip2 1s ease-in-out backwards infinite; */
+  animation-play-state: paused;
+}
+.card3.hour, .card3.minute {
+  /* animation: flip1 1s ease-in-out backwards infinite; */
+  animation-play-state: paused;
+}
+
 @keyframes flip1 {
   to {
     transform: rotateX(0.5turn);
