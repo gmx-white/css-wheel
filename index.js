@@ -2,7 +2,7 @@
  * @Author: gmx
  * @Date: 2023-05-18 14:36:02
  * @LastEditors: gmx
- * @LastEditTime: 2023-05-22 12:32:24
+ * @LastEditTime: 2023-05-22 18:10:45
  * @Description:
  * @Version: 1.0
  */
@@ -22,7 +22,7 @@ function changeAnimationState() {
   doms.second2.innerHTML = zeroFormat(nextSecond);
   doms.second3.innerHTML = zeroFormat(nowSecond);
   doms.second4.innerHTML = zeroFormat(nowSecond);
-  if (nextMinute > nowMinute) {
+  if (nextMinute !== nowMinute) {
     doms.minute2.style.animationPlayState = "running";
     doms.minute3.style.animationPlayState = "running";
   }
