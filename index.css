@@ -53,14 +53,7 @@
   animation: flip1 1s ease-in-out backwards infinite;
 }
 /* 时分暂停 */
-.card2.hour, .card2.minute {
-  /* transform-origin: center top; */
-  /* transform: rotateX(180deg); */
-  /* animation: flip2 1s ease-in-out backwards infinite; */
-  animation-play-state: paused;
-}
-.card3.hour, .card3.minute {
-  /* animation: flip1 1s ease-in-out backwards infinite; */
+.card2.hour, .card2.minute, .card3.hour, .card3.minute {
   animation-play-state: paused;
 }
 
