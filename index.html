@@ -2,12 +2,12 @@
  * @Author: gmx
  * @Date: 2023-05-18 13:48:42
  * @LastEditors: gmx
- * @LastEditTime: 2023-05-25 12:33:37
+ * @LastEditTime: 2023-05-25 20:45:42
  * @Description: 
  * @Version: 1.0
 -->
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -16,7 +16,19 @@
   <link rel="stylesheet" type="text/css" href="index.css">
 </head>
 <body>
-  
+  <div class="switch">
+    <svg class="icon sun" aria-hidden="true">
+      <use xlink:href="#icon-sun"></use>
+    </svg>
+    <div class="switch-btn">
+      <div class="btn-move"></div>
+    </div>
+    
+    <svg class="icon moon" aria-hidden="true" >
+      <use xlink:href="#icon-moon"></use>
+    </svg>
+  </div>
+  <script src="./assets/iconfont.js"></script>
   <script src="index.js"></script>
 </body>
 </html>
