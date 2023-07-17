@@ -121,3 +121,33 @@
   background-position-x: left;
   background-size: 100% 2px;
 }
+
+/* 文字跳动 */
+.font-dance {
+  width: 100px;
+}
+.font-dance-title {
+  color: #61c454;
+  font-size: 30px;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  transform: rotate(-15deg);
+  display: flex;
+}
+.font-dance-title span{
+  display: block;
+  text-shadow: 1px 1px #333, 2px 2px #333, 3px 3px #333;
+  transform: skew(-15deg);
+  animation: dance .5s cubic-bezier(0, 0, 0.27, 2.12) var(--delay) forwards;
+  opacity: 0;
+}
+@keyframes dance {
+  0% {
+    transform: skew(-15deg) translateY(300%);
+    opacity: 0;
+  }
+  100% {
+    transform: skew(-15deg) translateY(0);
+    opacity: 1;
+  }
+}
